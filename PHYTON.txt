@@ -1,0 +1,97 @@
+VERSION DE PYTHON INSTALADO 3.6.7
+
+CLASE 01:
+INTRODUCCIÓN:
+------------------------------------------------------------------
+
+CLASE 02:
+CARACTERÍSTICAS:
+No es necesario declarar el tipo de la variable
+Es interpretado
+Orienta a Objetos
+Tipado dinámico y fuerte
+
+CLASE 03:
+SINTAXIS BÁSICA:
+Cada instrucción debe ir en una línea
+Si van mas de una instrucción, separar por punto y coma
+
+CLASE 04:
+TIPOS, OPERADORES Y VARIABLES:
+Numéricos: int, float, complejos
+Textos
+Booleanos: true or false 
+
+En python absolutamente todo es un objeto 100%
+
+CLASE 05, 06:
+FUNCIONES:
+A las funciones también se les denominan métodos cuando son definidas dentro de una clase.
+Python pasa los valores de los parámetros por referencia
+
+CLASE 07:
+LAS LISTAS: []
+Nos permiten almacenar muchos valores
+Pueden guardar diferentes tipos de valores
+Se pueden añadir dinámicamente añadiendo nuevos elementos
+Son muy parecidos a los arrays en Java.
+
+CLASE 08: LAS TUPLAS: ()
+Son listas inmutables, no se pueden modificar después de su creación.
+Permiten extraer porciones, el resultado es un nuevo tupla.
+Formatean strings
+Las tuplas ocupan menos espacio que las listas.
+Pueden utilizarse como claves en un diccionario (listas no)
+
+CLASE 09: LOS DICCIONARIOS:
+Estructura de datos que nos permite almacenar valores de diferente tipo (entero, texto, etc),
+inculuso listas, tuplas y otros diccionarios, etc.
+Los datos se almacenan asociados a una clave (clave:valor)
+Los elementos almacenados no estan ordenados.
+kees() Devuelve las clavesConcatencación de operadores de comparación
+values() valores
+len() longitud
+
+CLASE 10, 11, 12: ESTRUCTURAS DE CONTROL DE FLUJO (CONDICIONALES)
+if, elif, else, --- switch --- no existe
+Concatencación de operadores de comparación
+Operadores lógicos and or
+operador in
+Una condición con concatenación de operadores de comparación se lee de izquierda a derecha
+and = y si además
+or = o sino
+in = en
+Python es case sensitive: distingue entre MAYÚSCULAS y minúsculas
+
+CLASE 14, 15, 16: ESTRUCTURAS DE CONTROL DE FLUJO (BUCLES)
+FOR:
+BUCLES: Determinados, sabemos cuantas veces se repetira
+Indeterminados, se ejecutará el número de veces según las cirscunstancias de ejecución del programa
+range = un tipo de dato
+
+print(f"Valor de variable {i}")
+la f indica que usaremos una notación especial, para usar formatos diferentes
+entre llaves la variable
+concatemos el texto con la variable
+
+CLASE 17:
+WHILE: ciclo Indeterminado
+
+CLASE 18: BUCLES: WHILE, FOR
+CONTINUE salta a la sgte iteración del bucle
+PASS devuelve null cuando se lee en el interior del bucle
+ELSE igual que con el if
+
+CLASE 19: GENERADORES:
+Estructuras que extraen valores de una función y se almacenan en objetos iterables (que se pueden recorrer)
+Estos valores se almacenan de uno en uno.
+Cada vez que un generador almacena un valor, este permanece en un estado pausado, hasta que se solicita el 
+siguiente. Esta característica es conocida como "suspensión de estado".
+
+
+
+
+
+
+
+
