@@ -9,8 +9,7 @@ def calcular_factorial(numero):
             numero -= 1
             factorial *= numero
     else:
-        factorial = 0
+        factorial = 1
     return factorial
 
 print('El factorial de ' + str(numero) + ' es: ' + str(calcular_factorial(numero)))
-# verificar porque devuelve none
