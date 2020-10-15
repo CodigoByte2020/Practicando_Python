@@ -92,6 +92,12 @@ CLASE 20: GENERADORES:
 Yield from: Simplificar el código de los generadores en el caso de utilizar 
 bucles anidados.
 
+CLASE 21, 22, 23: EXCEPCIONES:
+Son errores que ocurren durante la ejecucón del programa
+Podemos usar varias cláusulas except de forma consecutiva para capturar 
+excepciones consecutivas
+
+
 
 
 
