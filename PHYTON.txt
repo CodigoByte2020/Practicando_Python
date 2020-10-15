@@ -82,11 +82,15 @@ CONTINUE salta a la sgte iteración del bucle
 PASS devuelve null cuando se lee en el interior del bucle
 ELSE igual que con el if
 
-CLASE 19: GENERADORES:
+CLASE 19: GENERADORES: yield
 Estructuras que extraen valores de una función y se almacenan en objetos iterables (que se pueden recorrer)
 Estos valores se almacenan de uno en uno.
 Cada vez que un generador almacena un valor, este permanece en un estado pausado, hasta que se solicita el 
 siguiente. Esta característica es conocida como "suspensión de estado".
+
+CLASE 20: GENERADORES:
+Yield from: Simplificar el código de los generadores en el caso de utilizar 
+bucles anidados.
 
 
 
