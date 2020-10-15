@@ -25,8 +25,8 @@ objeto_generador_iterable = generaPares(5) #???
 print(objeto_generador_iterable)
 print(generaPares(5))
 
-# for i in objeto_generador_iterable:
-#     print(i)
+#for i in objeto_generador_iterable:
+#    print(i)
 
 #Es lo mismo que hacer un for a objeto_generador_iterable
 # for i in generaPares(5):
