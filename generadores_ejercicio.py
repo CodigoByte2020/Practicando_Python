@@ -1,4 +1,4 @@
-'''Escribir una función generadora que devuelva 10 numeros primos, pero el usuario decidirá cuantos de estos quiere visualizar: '''
+'''Escribir una función generadora que devuelva 3 numeros primos, pero el usuario decidirá cuantos de estos quiere visualizar: '''
 
 def numeros_primos(cantidad):
     numero = 2
