@@ -1,24 +1,24 @@
-VERSION DE PYTHON INSTALADO 3.6.7
+ï»¿VERSION DE PYTHON INSTALADO 3.6.7
 
 CLASE 01:
-INTRODUCCIÓN:
+INTRODUCCIï¿½N:
 ------------------------------------------------------------------
 
 CLASE 02:
-CARACTERÍSTICAS:
+CARACTERï¿½STICAS:
 No es necesario declarar el tipo de la variable
 Es interpretado
 Orienta a Objetos
-Tipado dinámico y fuerte
+Tipado dinï¿½mico y fuerte
 
 CLASE 03:
-SINTAXIS BÁSICA:
-Cada instrucción debe ir en una línea
-Si van mas de una instrucción, separar por punto y coma
+SINTAXIS Bï¿½SICA:
+Cada instrucciï¿½n debe ir en una lï¿½nea
+Si van mas de una instrucciï¿½n, separar por punto y coma
 
 CLASE 04:
 TIPOS, OPERADORES Y VARIABLES:
-Numéricos: int, float, complejos
+Numï¿½ricos: int, float, complejos
 Textos
 Booleanos: true or false 
 
@@ -26,18 +26,18 @@ En python absolutamente todo es un objeto 100%
 
 CLASE 05, 06:
 FUNCIONES:
-A las funciones también se les denominan métodos cuando son definidas dentro de una clase.
-Python pasa los valores de los parámetros por referencia
+A las funciones tambiï¿½n se les denominan mï¿½todos cuando son definidas dentro de una clase.
+Python pasa los valores de los parï¿½metros por referencia
 
 CLASE 07:
 LAS LISTAS: []
 Nos permiten almacenar muchos valores
 Pueden guardar diferentes tipos de valores
-Se pueden añadir dinámicamente añadiendo nuevos elementos
+Se pueden aï¿½adir dinï¿½micamente aï¿½adiendo nuevos elementos
 Son muy parecidos a los arrays en Java.
 
 CLASE 08: LAS TUPLAS: ()
-Son listas inmutables, no se pueden modificar después de su creación.
+Son listas inmutables, no se pueden modificar despuï¿½s de su creaciï¿½n.
 Permiten extraer porciones, el resultado es un nuevo tupla.
 Formatean strings
 Las tuplas ocupan menos espacio que las listas.
@@ -48,29 +48,29 @@ Estructura de datos que nos permite almacenar valores de diferente tipo (entero,
 inculuso listas, tuplas y otros diccionarios, etc.
 Los datos se almacenan asociados a una clave (clave:valor)
 Los elementos almacenados no estan ordenados.
-kees() Devuelve las clavesConcatencación de operadores de comparación
+kees() Devuelve las clavesConcatencaciï¿½n de operadores de comparaciï¿½n
 values() valores
 len() longitud
 
 CLASE 10, 11, 12: ESTRUCTURAS DE CONTROL DE FLUJO (CONDICIONALES)
 if, elif, else, --- switch --- no existe
-Concatencación de operadores de comparación
-Operadores lógicos and or
+Concatencaciï¿½n de operadores de comparaciï¿½n
+Operadores lï¿½gicos and or
 operador in
-Una condición con concatenación de operadores de comparación se lee de izquierda a derecha
-and = y si además
+Una condiciï¿½n con concatenaciï¿½n de operadores de comparaciï¿½n se lee de izquierda a derecha
+and = y si ademï¿½s
 or = o sino
 in = en
-Python es case sensitive: distingue entre MAYÚSCULAS y minúsculas
+Python es case sensitive: distingue entre MAYï¿½SCULAS y minï¿½sculas
 
 CLASE 14, 15, 16: ESTRUCTURAS DE CONTROL DE FLUJO (BUCLES)
 FOR:
 BUCLES: Determinados, sabemos cuantas veces se repetira
-Indeterminados, se ejecutará el número de veces según las cirscunstancias de ejecución del programa
+Indeterminados, se ejecutarï¿½ el nï¿½mero de veces segï¿½n las cirscunstancias de ejecuciï¿½n del programa
 range = un tipo de dato
 
 print(f"Valor de variable {i}")
-la f indica que usaremos una notación especial, para usar formatos diferentes
+la f indica que usaremos una notaciï¿½n especial, para usar formatos diferentes
 entre llaves la variable
 concatemos el texto con la variable
 
@@ -78,24 +78,34 @@ CLASE 17:
 WHILE: ciclo Indeterminado
 
 CLASE 18: BUCLES: WHILE, FOR
-CONTINUE salta a la sgte iteración del bucle
+CONTINUE salta a la sgte iteraciï¿½n del bucle
 PASS devuelve null cuando se lee en el interior del bucle
 ELSE igual que con el if
 
 CLASE 19: GENERADORES: yield
-Estructuras que extraen valores de una función y se almacenan en objetos iterables (que se pueden recorrer)
+Estructuras que extraen valores de una funciï¿½n y se almacenan en objetos iterables (que se pueden recorrer)
 Estos valores se almacenan de uno en uno.
 Cada vez que un generador almacena un valor, este permanece en un estado pausado, hasta que se solicita el 
-siguiente. Esta característica es conocida como "suspensión de estado".
+siguiente. Esta caracterï¿½stica es conocida como "suspensiï¿½n de estado".
 
 CLASE 20: GENERADORES:
-Yield from: Simplificar el código de los generadores en el caso de utilizar 
+Yield from: Simplificar el cï¿½digo de los generadores en el caso de utilizar 
 bucles anidados.
 
+CLASE 21, 22, 23: EXCEPCIONES:
+Son errores que ocurren durante la ejecucï¿½n del programa
+Podemos usar varias clï¿½usulas except de forma consecutiva para capturar 
+excepciones consecutivas
+Raise: para crear nuestra propia excepciÃ³n
 
+CLASE 24: POO
+Trasladar la natruraleza de los objetos de la videa real al cÃ³digo de programaciÃ³n
+Estado: Como se encuentra el objeto
+Comportamiento: Cual es el comportamiento del objeto - que puede hacer
+Propiedades: CaracterÃ­sticas del objeto
 
-
-
-
+Clase: Modelo donde se redactan las caracterÃ­sticas comunes de un grupo de objetos.
+Instancia, ejemplar u objeto de clase: Objeto pertenceciente a una clase.
+ModulariciÃ³n: Dividir una aplicaciÃ³n en varias clases.
 
 
