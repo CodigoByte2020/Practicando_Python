@@ -108,4 +108,11 @@ Clase: Modelo donde se redactan las características comunes de un grupo de obje
 Instancia, ejemplar u objeto de clase: Objeto pertenceciente a una clase.
 Modularición: Dividir una aplicación en varias clases.
 
+Diferencia entre función y método:
+Un método es una función especial que pertence a la clase donde se esta creando.
+La función no pertenece a ninguna clase
 
+self hace referencia al objeto perteneciente a la clase, es lo mismo que this en java, pero en java
+estaba de forma implícita.
+
+Un constructor es un método especial que le da estado inicial a los objetos.
