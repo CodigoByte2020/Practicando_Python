@@ -30,11 +30,11 @@ class Bicicleta:
 
 
 bicicleta_rutera = Bicicleta()
-bicicleta_rutera.setHorquilla(False)
+print(bicicleta_rutera.setHorquilla(False))
 print(bicicleta_rutera.getInformacion())
 
 print("<----------------- OBJETO 2 ----------------->")
 
 bicicleta_montanniera = Bicicleta()
-bicicleta_montanniera.setHorquilla(True)
+print(bicicleta_montanniera.setHorquilla(True))
 print(bicicleta_montanniera.getInformacion())
