@@ -116,3 +116,10 @@ self hace referencia al objeto perteneciente a la clase, es lo mismo que this en
 estaba de forma implícita.
 
 Un constructor es un método especial que le da estado inicial a los objetos.
+
+Clase 29: HERENCIA:
+Cuando una clase hija, hereda de su clase padre, atributos, métodos y constructor
+Se usa para reutilizar código
+
+
+
