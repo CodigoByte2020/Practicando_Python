@@ -1,5 +1,7 @@
 class Vehiculo():
 
+    vagina = 20 #Se heredan las propiedades de la clase
+
     def __init__(self, marca, modelo):
         self.marca = marca
         self.modelo = modelo
@@ -7,7 +9,7 @@ class Vehiculo():
         self.acelera = False
         self.frena = False
 
-    def arrancar(self):
+    def arrancar(self):#Se heredan los métodos de la clase
         self.en_marcha = True
 
     def acelerar(self):
@@ -61,10 +63,12 @@ print(mi_furgoneta.carga(True))
 
 class VElectricos():
 
+    trola = "pinga" #Se heredan las propiedades de la clase
+
     def __init__(self):
         self.autonomia = 100
 
-    def cargarEnergia(self):
+    def cargarEnergia(self): #Se heredan los métodos de la clase
         self.cargando = True
 
 
@@ -72,10 +76,11 @@ class BicicletaElectrica(VElectricos, Vehiculo): #Se hereda el constructor de la
 
     pass
 
-'''El objeto mi_bici hereda los atributos de la clase VElectricos y Vehiculo pero solo se inicializaron los atributos de la clase VElectricos, porque
-llamamos a ese constructor y no al de la clase Vehiculo'''
+'''El objeto mi_bici hereda los atributos de la clase VElectricos y Vehiculo pero solo se inicializarán los atributos que están dentro del constructor de la clase VElectricos, porque
+llamamos al constructor de la primera clase en la herencia múltiple (la clase de la izquierda)'''
 mi_bici = BicicletaElectrica()
-mi_bici.marca = "Scott" #Por el comentario de arriba hacemos esto
+mi_bici.marca = "Scott" #Agregamos la propiedad marca al objeto mi_bici
+mi_bici.tamannio = 10 #Agregamos la propiedad tamannio al objeto mi_bici
+mi_bici.arrancar()
+#mi_bici.estado() #ERROR, mi_bici no tiene la propiedad modelo
 print("V:")
-
-
