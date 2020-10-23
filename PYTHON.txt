@@ -121,5 +121,10 @@ Clase 29: HERENCIA:
 Cuando una clase hija, hereda de su clase padre, atributos, métodos y constructor
 Se usa para reutilizar código
 
+CLASE 32: POLIMORFISMO:
+Es la capacidad que tiene un objeto de cambiar de forma.
+
+
+
 
 
