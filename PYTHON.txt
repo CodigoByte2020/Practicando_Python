@@ -124,7 +124,8 @@ Se usa para reutilizar código
 CLASE 32: POLIMORFISMO:
 Es la capacidad que tiene un objeto de cambiar de forma.
 
-
+CLASE 33:METODOS DE CADENAS
+Se considera a las palabras objetos de tipo string
 
 
 
