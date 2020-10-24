@@ -124,8 +124,13 @@ Se usa para reutilizar código
 CLASE 32: POLIMORFISMO:
 Es la capacidad que tiene un objeto de cambiar de forma.
 
-CLASE 33:METODOS DE CADENAS
+CLASE 33: METODOS DE CADENAS
 Se considera a las palabras objetos de tipo string
 
+CLASE 34: MODULOS
+Es un archivo con extensión .py .pyc (Python compilado) o archivo escrito en C para CPython
+que posee su propio espacio de nombres y que puede contener variables funciones, clases e 
+incluso otro módulos.
+Se usa para organizar y reutilizar código (modularización y reutilización)
 
 
