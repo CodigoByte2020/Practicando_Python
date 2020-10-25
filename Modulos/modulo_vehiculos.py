@@ -37,11 +37,6 @@ class Moto(Vehiculo): #La clase Moto hereda de la clase Vehiculo sus atributos, 
               + "\nAcelerando: " + str(self.acelera) + "\nFrenando: " + str(self.frena) + "\n" + self.hcaballito)
 
 
-mi_moto = Moto("Toyota", "Sport") #Se pasan los argumentos que necesita el constructor de la clase padre (Vehiculo)
-mi_moto.caballito()
-mi_moto.estado()
-
-
 class Furgoneta(Vehiculo):
 
     def carga(self, cargar):
@@ -52,13 +47,6 @@ class Furgoneta(Vehiculo):
 
         else:
             return "La furgoneta esta descargada"
-
-
-print("<------------------------ Furgoneta ---------------------------->")
-mi_furgoneta = Furgoneta("Lebrinz", "pulpex")
-mi_furgoneta.arrancar()
-mi_furgoneta.estado()
-print(mi_furgoneta.carga(True))
 
 
 class VElectricos(Vehiculo):

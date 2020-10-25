@@ -133,4 +133,8 @@ que posee su propio espacio de nombres y que puede contener variables funciones,
 incluso otro módulos.
 Se usa para organizar y reutilizar código (modularización y reutilización)
 
+CLASE 35: PAQUETES
+Son directorios donde se almacenarán módulos relacionados entre sí
+Sirven para organizar y reutilizar los módulos.
+Para crear paquetes se crea una carpeta con un archivo __init__.py
 
