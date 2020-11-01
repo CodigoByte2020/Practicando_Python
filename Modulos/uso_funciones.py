@@ -10,7 +10,8 @@ funciones_matematicas.dividir(10, 5)'''
 sumar(4, 2)
 restar(4, 2) #función no importada'''
 
-from funciones_matematicas import * #Importamos todos los componenetes de ese módulo
+# Este módulo se busca en el mismo nivel del directorio actualImportamos todos los componenetes de ese módulo
+from funciones_matematicas import *
 
 sumar(3, 2)
 restar(3, 2)
