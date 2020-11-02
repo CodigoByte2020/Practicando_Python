@@ -136,5 +136,12 @@ Se usa para organizar y reutilizar código (modularización y reutilización)
 CLASE 35: PAQUETES
 Son directorios donde se almacenarán módulos relacionados entre sí
 Sirven para organizar y reutilizar los módulos.
-Para crear paquetes se crea una carpeta con un archivo __init__.py
+Cada paquete o subpaquete debe contener un archivo __init__.py
+
+CLASE 36: PAQUETES DISTRIBUIBLES
+Instalar el paquete en el python del S.O.
+Crear un archivo setup.py que tendrá la descripción del paquete a distribuir
+
+
+
 
