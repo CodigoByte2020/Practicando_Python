@@ -24,9 +24,6 @@ peaje =   [['D','D','D','D','D','X','N'],
            ['N','N','N','N','N','N','X'],
            ['N','N','N','N','N','X','N']]
 
-descanse = [['X','D','D','D','D','D','D']]
-reten =    [['X','X','X','N','X','N','X']]
-
 '''for ii in matriz:
     for j in ii:
         for i in j:
@@ -36,7 +33,7 @@ reten =    [['X','X','X','N','X','N','X']]
 #k = columna de matriz
 #j = fila de listas internas
 #i = columna de listas internas
-matriz = [oficina, almacen, peaje, descanse, reten]
+matriz = [oficina, almacen, peaje]
 Dxcolumna = 0
 Nxcolumna = 0
 Xxcolumna = 0
@@ -78,23 +75,14 @@ for k in range(len(matriz)):
                 posicion_descanso.append(j)
                 posicion_descanso.append(i)
                 posiciones_descanso.append(posicion_descanso)'''
-                if k < len(matriz) - 1:
-                    if descansos_fila == 0:
-                        columnas_descanso.append(i)
-                elif k == len(matriz) - 1:
+                if descansos_fila == 0:
                     columnas_descanso.append(i)
                 descansos_fila += 1
 
-        if k < len(matriz) - 1:
-            if descansos_fila != 1:
-                print('ERROR en la cantidad de descansos por trabajador.')
-                print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
-            descansos_fila = 0
-
-        elif k == len(matriz) - 1:
-            if descansos_fila != 5:
-                print('ERROR en la cantidad de descansos del descansero 2.')
-                print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
+        if descansos_fila != 1:
+            print('ERROR en la cantidad de descansos por trabajador.')
+            print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
+        descansos_fila = 0
 
 
 #Validamos la cantidad de Ds y Ns en cada día - Validación por columna
