@@ -13,7 +13,7 @@ descanse = [['X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D'
 reten =    [['X','X','X','N','X','N','X','X','X','X','N','X','N','X','X','X','X','N','X','N','X','X','X','X','N','X','N','X','X','X']]'''
 
 oficina = [['D', 'X', 'N', 'N', 'N', 'N', 'N'],
-           ['D', 'N', 'X', 'D', 'D', 'D', 'D']]
+           ['N', 'N', 'X', 'D', 'D', 'D', 'D']]
 
 almacen = [['D', 'D', 'D', 'X', 'N', 'N', 'N'],
            ['N', 'N', 'N', 'N', 'X', 'D', 'D'],
@@ -38,16 +38,16 @@ reten =   [['X', 'X', 'X', 'N', 'X', 'N', 'X']]
 matriz = [oficina, almacen, peaje, descanse, reten]
 Dxcolumna = 0
 Nxcolumna = 0
-Xxcolumna = 0
+#Xxcolumna = 0
 
-unidad_fallada = 0
+#unidad_fallada = 0
 descansos_fila = 0
 
 descansos_columna = 0
-cantidad_Ds = 0
-cantidad_Ns = 0
-cantidad_DNs = 0
-index_descanso = 0
+#cantidad_Ds = 0
+#cantidad_Ns = 0
+#cantidad_DNs = 0
+# = 0
 
 '''for i in range(7):
     for k in range(len(matriz)):
@@ -91,6 +91,7 @@ for k in range(len(matriz)):
                 print('ERROR en la cantidad de descansos del descansero 2.')
                 print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
 
+
 # Validamos la cantidad de Ds y Ns en cada día - Validación por columna
 for i in range(7):
     for k in range(len(matriz)):
@@ -107,7 +108,7 @@ for i in range(7):
     Dxcolumna = 0
     Nxcolumna = 0
 
-# Validamos la cantidad de Ds y Ns por unidad y por columna
+
 rol_servicio = [
     {'U1': oficina},
     {'U2': almacen},
@@ -124,7 +125,9 @@ unidad_validacion = \
      'U5': [0, 1]}
 
 i = 0
-index_temp = 0
+#index_temp = 0
+
+#Validamos la distribución de Ds y Ns en cada unidad - Validación por columna de unidad
 for unidad in rol_servicio:
     for key, value in unidad.items():
         validacion = unidad_validacion[key]
@@ -137,6 +140,6 @@ for unidad in rol_servicio:
                 elif unidad[key][j][i] == 'N':
                     n += 1
             if d > unidad_validacion[key][0]:
-                print('ERROR, exceso de día(s) en la unidad: ' + key + ' ' + str(d) + ' días')
+                print('ERROR, exceso de día(s) en la unidad: ' + key + '. ' + str(d) + ' días')
             elif n > unidad_validacion[key][1]:
-                print('ERROR, exceso de noche(s) en la unidad: ' + key + ' ' + str(n) + ' noches')
+                print('ERROR, exceso de noche(s) en la unidad: ' + key + '. ' + str(n) + ' noches')
