@@ -1,142 +1,102 @@
-'''oficina = [['D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X'],
-           ['N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N']]
+class Main:
 
-almacen = [['D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D'],
-           ['N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N'],
-           ['N','N','N','X','N','N','N','N','N','N','X','N','N','N','N','N','N','X','N','N','N','N','N','N','X','N','N','N','N','N']]
+    def __init__(self):
+        self.Dxcolumna = 0
+        self.Nxcolumna = 0
+        self.descansos_fila = 0
 
-peaje =   [['D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D'],
-           ['N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N'],
-           ['N','N','N','N','N','X','N','N','N','N','N','N','X','N','N','N','N','N','N','X','N','N','N','N','N','N','X','N','N','N']]
+        self.oficina = [['D', 'X', 'N', 'N', 'N', 'N', 'N'],
+                   ['N', 'N', 'X', 'D', 'D', 'D', 'D']]
 
-descanse = [['X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D','D','D','D','D','D','X','N','N','N','N','N','N','X','D']]
-reten =    [['X','X','X','N','X','N','X','X','X','X','N','X','N','X','X','X','X','N','X','N','X','X','X','X','N','X','N','X','X','X']]'''
+        self.almacen = [['D', 'D', 'D', 'X', 'N', 'N', 'N'],
+                   ['N', 'N', 'N', 'N', 'X', 'D', 'D'],
+                   ['N', 'N', 'N', 'X', 'N', 'N', 'N']]
 
-oficina = [['D', 'X', 'N', 'N', 'N', 'N', 'N'],
-           ['D', 'N', 'X', 'D', 'D', 'D', 'D']]
+        self.peaje = [['D', 'D', 'D', 'D', 'D', 'X', 'N'],
+                 ['N', 'N', 'N', 'N', 'N', 'N', 'X'],
+                 ['N', 'N', 'N', 'N', 'N', 'X', 'N']]
 
-almacen = [['D', 'D', 'D', 'X', 'N', 'N', 'N'],
-           ['N', 'N', 'N', 'N', 'X', 'D', 'D'],
-           ['N', 'N', 'N', 'X', 'N', 'N', 'N']]
+        self.descansero = [['X', 'D', 'D', 'D', 'D', 'D', 'D']]
 
-peaje =   [['D', 'D', 'D', 'D', 'D', 'X', 'N'],
-           ['N', 'N', 'N', 'N', 'N', 'N', 'X'],
-           ['N', 'N', 'N', 'N', 'N', 'X', 'N']]
+        self.reten = [['X', 'X', 'X', 'N', 'X', 'N', 'X']]
 
-descanse =[['X', 'D', 'D', 'D', 'D', 'D', 'D']]
-reten =   [['X', 'X', 'X', 'N', 'X', 'N', 'X']]
+        self.__rol_servicio = [
+            {'U1': self.oficina},
+            {'U2': self.almacen},
+            {'U3': self.peaje},
+            {'U4': self.descansero},
+            {'U5': self.reten}
+        ]
 
-'''for ii in matriz:
-    for j in ii:
-        for i in j:
-            print('[' + i + ']', end=' ')
-        print()
-    print()'''
-# k = columna de matriz
-# j = fila de listas internas
-# i = columna de listas internas
-matriz = [oficina, almacen, peaje, descanse, reten]
-Dxcolumna = 0
-Nxcolumna = 0
-Xxcolumna = 0
+        self.__unidad_validacion = \
+            {'U1': [1, 1],
+             'U2': [1, 2],
+             'U3': [1, 2],
+             'U4': [1, 0],
+             'U5': [0, 1]}
 
-unidad_fallada = 0
-descansos_fila = 0
+    # Validamos que cada trabajador tenga un descanso, excepto el reten - Validación por fila
+    def validacion_descanso_fila(self):
+        for unidad in self.__rol_servicio:
+            for key, value in unidad.items():
+                for j in range(len(unidad[key])):
+                    descansos_fila = 0
+                    for i in range(len(value[0])):
+                        if unidad[key][j][i] == 'X':
+                            descansos_fila += 1
+                    if key != 'U5':
+                        if descansos_fila != 1:
+                            print('ERROR en la cantidad de descansos por trabajador')
+                            print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
+                    else:
+                        if descansos_fila != 5:
+                            print('ERROR en la cantidad de descansos por trabajador')
+                            print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
 
-descansos_columna = 0
-cantidad_Ds = 0
-cantidad_Ns = 0
-cantidad_DNs = 0
-index_descanso = 0
+    # Validamos la cantidad de Ds y Ns en cada día - Validación por columna
+    def validacion_turnos_columna(self):
+        i = 0
+        d_columna = n_columna = 0
+        for i in range(len(self.__rol_servicio[0]['U1'][0][0])):
+            for unidad in self.__rol_servicio:
+                for key, value in unidad.items():
+                    for j in range(len(unidad[key])):
+                        if unidad[key][j][i] == 'D':
+                            d_columna += 1
+                        elif unidad[key][j][i] == 'N':
+                            n_columna += 1
+                    if d_columna != 3 or n_columna != 5:
+                        print('ERROR en la repartición de turnos por día.')
+                        print('Columna [' + str(i) + ']:')
+                        print('D = ' + str(d_columna))
+                        print('N = ' + str(n_columna))
+                    d_columna = n_columna = 0
 
-'''for i in range(7):
-    for k in range(len(matriz)):
-        for j in range(len(matriz[k])):
-            if 'D' in matriz[k][j][i]:
-                Dxcolumna += 1
-            elif 'N' in matriz[k][j][i]:
-                Nxcolumna += 1
-            elif 'X' in matriz[k][j][i]:
-                Xxcolumna += 1
-        j = 0'''
+    #Validamos la distribución de Ds y Ns en cada unidad - Validación por columna de unidad
+    def validacion_turnos_unidad(self):
+        i = 0
+        for unidad in self.__rol_servicio:
+            for key, value in unidad.items():
+                validacion = self.__unidad_validacion[key]
+                for i in range(len(value[0])):
+                    d = n = 0
+                    for j in range(len(value)):
+                        if unidad[key][j][i] == 'D':
+                            d += 1
+                        elif unidad[key][j][i] == 'N':
+                            n += 1
+                    if d > self.__unidad_validacion[key][0]:
+                        print('ERROR, exceso de día(s) en la unidad: ' + key + '. ' + str(d) + ' días')
+                    elif n > self.__unidad_validacion[key][1]:
+                        print('ERROR, exceso de noche(s) en la unidad: ' + key + '. ' + str(n) + ' noches')
 
-# posiciones_descanso = []
-columnas_descanso = []
 
-# Validamos que cada trabajador tenga un descanso, excepto el descansero 2 - Validación por fila
-for k in range(len(matriz)):
-    for j in range(len(matriz[k])):
-        for i in range(len(matriz[k][j])):
-            if 'X' in matriz[k][j][i]:
-                '''posicion_descanso = []
-                posicion_descanso.append(k)
-                posicion_descanso.append(j)
-                posicion_descanso.append(i)
-                posiciones_descanso.append(posicion_descanso)'''
-                if k < len(matriz) - 1:
-                    if descansos_fila == 0:
-                        columnas_descanso.append(i)
-                elif k == len(matriz) - 1:
-                    columnas_descanso.append(i)
-                descansos_fila += 1
 
-        if k < len(matriz) - 1:
-            if descansos_fila != 1:
-                print('ERROR en la cantidad de descansos por trabajador.')
-                print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
-            descansos_fila = 0
+if __name__ == '__main__':
+    main = Main()
+    main.validacion_descanso_fila()
+    main.validacion_turnos_columna()
+    main.validacion_turnos_unidad()
 
-        elif k == len(matriz) - 1:
-            if descansos_fila != 5:
-                print('ERROR en la cantidad de descansos del descansero 2.')
-                print('Fila [' + str(j) + ']: ' + str(descansos_fila) + ' descansos.')
 
-# Validamos la cantidad de Ds y Ns en cada día - Validación por columna
-for i in range(7):
-    for k in range(len(matriz)):
-        for j in range(len(matriz[k])):
-            if 'D' in matriz[k][j][i]:
-                Dxcolumna += 1
-            elif 'N' in matriz[k][j][i]:
-                Nxcolumna += 1
-    if Dxcolumna != 3 or Nxcolumna != 5:
-        print('ERROR en la repartición de turnos por día.')
-        print('Columna [' + str(i) + ']:')
-        print('D = ' + str(Dxcolumna))
-        print('N = ' + str(Nxcolumna))
-    Dxcolumna = 0
-    Nxcolumna = 0
-
-# Validamos la cantidad de Ds y Ns por unidad y por columna
-rol_servicio = [
-    {'U1': oficina},
-    {'U2': almacen},
-    {'U3': peaje},
-    {'U4': descanse},
-    {'U5': reten}
-]
-
-unidad_validacion = \
-    {'U1': [1, 1],
-     'U2': [1, 2],
-     'U3': [1, 2],
-     'U4': [1, 0],
-     'U5': [0, 1]}
-
-i = 0
-index_temp = 0
-for unidad in rol_servicio:
-    for key, value in unidad.items():
-        validacion = unidad_validacion[key]
-        # temp = []
-        for i in range(len(value[0])):
-            d = n = 0
-            for j in range(len(value)):
-                if unidad[key][j][i] == 'D':
-                    d += 1
-                elif unidad[key][j][i] == 'N':
-                    n += 1
-            if d > unidad_validacion[key][0]:
-                print('ERROR, exceso de día(s) en la unidad: ' + key + ' ' + str(d) + ' días')
-            elif n > unidad_validacion[key][1]:
-                print('ERROR, exceso de noche(s) en la unidad: ' + key + ' ' + str(n) + ' noches')
+    
