@@ -10,6 +10,10 @@ class Conejo:
     def cumpleAnnios(self):
         self.edad += 1
 
+    def ajjsajasj(self):  # Para poder llamar a un metodo en la misma clase, se debe hacer dentro de otro método
+        self.cumpleAnnios()
+        self.información()
+
     def edadActual(self):
         if self.edad == 1:
             return "El conejo es joven"
