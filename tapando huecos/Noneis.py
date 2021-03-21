@@ -35,7 +35,7 @@ print("%s: %s" % (tupla, id(tupla)))
 numero_cinco = 5
 print("%s: %s" % (numero_cinco, id(numero_cinco)))
 
-Programa que pida 5 números y que compruebe cuál es el mayor
+# Programa que pida 5 números y que compruebe cuál es el mayor
 
 lista = []
 mayor = 0
